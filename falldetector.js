@@ -11,7 +11,7 @@ BBCMicrobit.discover(function(microbit) {
     microbit.on('event', function(id, value) {
         console.log('\ton -> micro:bit event received event: %d value: %d', id, value);
 	if(value == 18)
-		require('child_process').spawn('sh', ['test.sh'], {stdio: 'inherit'});
+		require('child_process').spawn('sh', ['call.sh'], {stdio: 'inherit'});
     });
 
     microbit.on('disconnect', function() {
